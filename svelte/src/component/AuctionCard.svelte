@@ -26,8 +26,9 @@
                 {auction.title}
             </div>
             <div class="card-body ">
-                <h5 class="card-title">{auction.description}</h5>
+                <p class="card-title">{auction.description}</p>
                 <p class="card-text">{auction.category}</p>
+                <p class="card-text">{auction.conditions}</p>
             </div>
         </div>
     {/each}
@@ -38,7 +39,7 @@
 
 <style>
     .card-header{
-        background: lightgreen;
+        background: #badbcc;
     }
     .card {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

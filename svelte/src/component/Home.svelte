@@ -52,31 +52,56 @@
 </script>
 
 <form on:submit|preventDefault={createAuction}>
-    <label for="title">Title:</label>
-    <input type="text" id="title" bind:value={title} required>
-    <br>
-
-    <label for="category">Category:</label>
-    <select id="category" bind:value={category} required>
-        <option value="">Select a category</option>
-        {#each Object.keys(Categories) as cat}
-            <option value={Categories[cat]}>{cat}</option>
-        {/each}
-    </select>
-    <br>
-
-    <label for="condition">Condition:</label>
-    <select id="condition" bind:value={condition} required>
-        <option value="">Select item condition</option>
-        {#each Object.keys(ItemConditions) as cond}
-            <option value={ItemConditions[cond]}>{cond}</option>
-        {/each}
-    </select>
-    <br>
-
-    <label for="description">Description:</label>
-    <textarea id="description" bind:value={description}></textarea>
-    <br>
-    <button type="submit">Create Auction</button>
-
+    <div class="container-fluid navigation pb-5 mb-3">
+        <div class="card">
+        <div class="card-header">
+            Erstell ein Angebot
+        </div>
+        <div class="card-body">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" bind:value={title} required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="category">Category:</label>
+                    <select class="form-control" id="category" bind:value={category} required>
+                        <option value="">Select a category</option>
+                        {#each Object.keys(Categories) as cat}
+                            <option value={Categories[cat]}>{cat}</option>
+                        {/each}
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="condition">Condition:</label>
+                    <select class="form-control" id="condition" bind:value={condition} required>
+                        <option value="">Select item condition</option>
+                        {#each Object.keys(ItemConditions) as cond}
+                            <option value={ItemConditions[cond]}>{cond}</option>
+                        {/each}
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" id="description" bind:value={description}></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <button type="submit">Create Auction</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
 </form>
+
+<style>
+    .card-header{
+        background: #badbcc;
+    }
+    .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
