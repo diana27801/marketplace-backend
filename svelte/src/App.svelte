@@ -1,30 +1,27 @@
-<script>
-	export let name;
+<script lang="ts">
+	import {Route, Router} from "svelte-navigator";
+	import Header from "./component/Header.svelte";
+	import Footer from "./component/Footer.svelte";
+	import AuctionCard from "./component/AuctionCard.svelte";
+	import Home from "./component/Home.svelte";
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<Router>
+	<main>
+		<Header/>
+		<Route path="/">
+			<Home/>
+		</Route>
+		<Route path="auction">
+			<AuctionCard/>
+		</Route>
+		<Footer/>
+	</main>
+</Router>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+		max-width: 50rem;
+		margin: auto;
 	}
 </style>
