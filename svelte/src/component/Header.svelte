@@ -4,7 +4,7 @@
 <header class="header pt-2">
     <div class="container-fluid navigation pb-5 mb-3">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a href="" class="navbar-brand">
+            <a href="#" class="navbar-brand">
                 <img src="ebay.png" width="80" height="40" alt="Logo" id="logo">
             </a>
 

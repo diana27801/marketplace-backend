@@ -32,6 +32,7 @@ public class BidController {
         return bidRepository.findAll(filter, pageable);
     }
 
+
     @PostMapping
     ResponseEntity<?> addBid(@RequestBody @Valid BidDto bidDto, @Username String username) {
         if(username != null) {

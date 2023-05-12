@@ -28,7 +28,7 @@
             <div class="card-body ">
                 <p class="card-title">{auction.description}</p>
                 <p class="card-text">{auction.category}</p>
-                <p class="card-text">{auction.conditions}</p>
+                <p class="card-text">{auction.condition}</p>
             </div>
         </div>
     {/each}
@@ -38,6 +38,10 @@
 </div>
 
 <style>
+    button{
+        width: 50%;
+        float: right;
+    }
     .card-header{
         background: #badbcc;
     }
