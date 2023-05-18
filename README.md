@@ -12,10 +12,5 @@
 ______________________________________
 # Prometheus
 1. Install Prometheus
-2. Add in prometheus.yml: 
-- job_name: 'spring_marketplace'
-    metrics_path: '/actuator/prometheus'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['HOST:PORT']
+2. update prometheus.yml
 3. access Prometheus on: http://localhost:9090/
