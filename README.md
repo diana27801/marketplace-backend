@@ -9,3 +9,13 @@
 7. `npm install svelte-navigator`
 8. `npm run build`
 9. `npm run dev`
+______________________________________
+# Prometheus
+1. Install Prometheus
+2. Add in prometheus.yml: 
+- job_name: 'spring_marketplace'
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['HOST:PORT']
+3. access Prometheus on: http://localhost:9090/
